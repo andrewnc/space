@@ -1,0 +1,17 @@
+
+datasource db {
+  provider = "sqlite"
+  url = "***"
+}
+
+generator client {
+  provider = "prisma-client-js"
+  output = "../server/node_modules/.prisma/client"
+}
+
+model Launch {
+    id Int @id @default(autoincrement())
+  name String
+  payloadWeight Float
+}
+

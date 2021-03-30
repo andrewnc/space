@@ -1,0 +1,50 @@
+app space_crm {
+  title: "SPACE"
+}
+
+route "/" -> page Launch
+page Launch {
+  component: import Launch from "@ext/LaunchPage.js"
+}
+
+route "/home" -> page Main
+page Main {
+  component: import Main from "@ext/MainPage.js"
+}
+
+route "/new" -> page NewLaunch
+page NewLaunch{
+  component: import NewLaunch from "@ext/NewLaunchPage.js"
+}
+
+route "/weather" -> page WeatherPage
+page WeatherPage {
+  component: import WeatherPage from "@ext/WeatherPage.js"
+}
+
+query getLaunches {
+  fn: import { getLaunches } from "@ext/queries.js",
+  entities: [Launch]
+}
+
+action createLaunch {
+  fn: import { createLaunch } from "@ext/actions.js",
+  entities: [Launch]
+}
+
+action deleteLaunch {
+  fn: import { deleteLaunch } from "@ext/actions.js",
+  entities: [Launch]
+}
+
+dependencies {=json
+  "react-pro-sidebar": "^0.6.0",
+  "react-router-dom": "^5.1.2",
+  "react-icons": "^4.2.0"
+json=}
+
+entity Launch {=psl
+  id Int @id @default(autoincrement())
+  name String
+  payloadWeight Float
+psl=}
