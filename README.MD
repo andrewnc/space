@@ -13,7 +13,7 @@ I explored a number of new topics in this project:
 * Animation and drawing with CSS (as found in `LaunchPage.js` and `Main.css`)
 * Importing React libraries
 * Advanced CSS styling for button hovering
-* Create Read and Delete functionality for rocket launches with a persistent Prisma database (see `main.wasp` or `.wasp/server/src`)
+* Create Read and Delete functionality for rocket launches with a persistent Prisma database (see `main.wasp` or `.wasp/server/src` if you have a local build)
 * React Effects for interacting with external values (see `WeatherPage.js`)
 * State management with React hooks (see `NewLaunchPage.js`)
 * Data Fetching for the monitoring of weather on Mars (see `WeatherPage.js`)
@@ -22,4 +22,4 @@ The app is live and running at `https://is542-space.netlify.app` for the backend
 
 There are few routes to be aware of. The root shows a custom CSS animation, then `/home` allows for the creation and deletion of new rocket launches by routing to `/new` and using an on-page launch cancelation button. Finally, `/weather` queries NASA data from the Mar's rover and displays the most recent weather on Mars.
 
-The javascript and css code for this project is in the `/ext` folder while the wasp file is the single `main.wasp`. The deployed version of the site can be found in `./wasp/build/web-app/` and `./wasp/build/server`. 
+The javascript and css code for this project is in the `/ext` folder while the wasp file is the single `main.wasp`. The deployed version of the site can be found in `./wasp/build/web-app/` and `./wasp/build/server` after you follow building instructions on `https://wasp-lang.dev/docs/deploying`. 
